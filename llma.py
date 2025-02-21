@@ -1,18 +1,27 @@
 import streamlit as st
-from langchain.embeddings import OllamaEmbeddings
-from langchain.vectorstores import FAISS
+from langchain_ollama import OllamaLLM, OllamaEmbeddings  # Updated imports
+from langchain_community.vectorstores import FAISS  # Updated import
 from langchain.text_splitter import CharacterTextSplitter
-from langchain.llms import Ollama
 from langchain.chains import ConversationalRetrievalChain
 
+# Function to initialize a smaller model if available
+def initialize_model():
+    try:
+        # Use a smaller model like "mistral" to reduce memory usage
+        embeddings = OllamaEmbeddings(model="mistral")
+        llm = OllamaLLM(model="mistral")
+    except ValueError as e:
+        st.error("Memory error: Please try using a smaller model or reduce document size.")
+        raise e
+    return embeddings, llm
+
 # Initialize embeddings and LLM
-embeddings = OllamaEmbeddings(model="llama2")
-llm = Ollama(model="llama2")
+embeddings, llm = initialize_model()
 
 # Function to process the document
 def process_document(file):
     text = file.getvalue().decode("utf-8")
-    text_splitter = CharacterTextSplitter(chunk_size=1000, chunk_overlap=0)
+    text_splitter = CharacterTextSplitter(chunk_size=512, chunk_overlap=50)  # Adjusted chunk size
     texts = text_splitter.split_text(text)
     vectorstore = FAISS.from_texts(texts, embeddings)
     return vectorstore

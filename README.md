@@ -25,20 +25,20 @@ git clone https://github.com/dangminh214/RAG-Ollama-simple.git
 
 3. Create a virtual environment (optional but recommended):
 ```bash
-python -m venv venv
+py -m venv venv
 source venv/bin/activate # On Windows use venv\Scripts\activate
 ```
 
 5. Install the required packages:
 ```bash
-pip install -U langchain langchain-community streamlit faiss-cpu
+py -m pip install -U langchain langchain-community streamlit faiss-cpu
 ```
 
 7. Install Ollama from [https://ollama.ai/](https://ollama.ai/)
 
 8. Pull the Llama2 model:
 ```bash
-ollama pull llama2
+ollama pull mistral
 ```
 
 ## Usage

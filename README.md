@@ -14,7 +14,7 @@ This project implements a simple Retrieval-Augmented Generation (RAG) chatbot us
 ## Prerequisites
 
 - Python 3.7+
-- Ollama (with Llama2 model installed)
+- Ollama (with Mistral model installed)
 
 ## Installation
 
@@ -26,7 +26,6 @@ git clone https://github.com/dangminh214/RAG-Ollama-simple.git
 3. Create a virtual environment (optional but recommended):
 ```bash
 py -m venv venv
-source venv/bin/activate # On Windows use venv\Scripts\activate
 ```
 
 5. Install the required packages:
@@ -45,7 +44,7 @@ ollama pull mistral
 
 1. Run the Streamlit app:
 ```bash
-streamlit run llma.py
+streamlit run bot.py
 ```
 
 2. Open your web browser and go to the URL provided by Streamlit (usually `http://localhost:8501`)

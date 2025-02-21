@@ -1,6 +1,6 @@
 import streamlit as st
-from langchain_ollama import OllamaLLM, OllamaEmbeddings  # Updated imports
-from langchain_community.vectorstores import FAISS  # Updated import
+from langchain_ollama import OllamaLLM, OllamaEmbeddings
+from langchain_community.vectorstores import FAISS
 from langchain.text_splitter import CharacterTextSplitter
 from langchain.chains import ConversationalRetrievalChain
 

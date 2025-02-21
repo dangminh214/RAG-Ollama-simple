@@ -36,7 +36,7 @@ py -m pip install -U langchain langchain-community streamlit faiss-cpu
 
 7. Install Ollama from [https://ollama.ai/](https://ollama.ai/)
 
-8. Pull the Llama2 model:
+8. Pull the Mistral model:
 ```bash
 ollama pull mistral
 ```

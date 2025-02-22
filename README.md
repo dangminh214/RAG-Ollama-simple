@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project implements a simple Retrieval-Augmented Generation (RAG) chatbot using LangChain, Streamlit, and the open-source Llama model via Ollama. The chatbot allows users to upload a text file as a knowledge base and then ask questions based on that information.
+This project implements a simple Retrieval-Augmented Generation (RAG) chatbot using LangChain, Streamlit, and the open-source Mistral model via Ollama. The chatbot allows users to upload a text file as a knowledge base and then ask questions based on that information.
 
 ## Features
 

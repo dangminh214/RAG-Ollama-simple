@@ -88,3 +88,5 @@ You can customize the chatbot by:
 - Implement persistent storage for the vector store
 - Add options for different embedding and LLM models
 - Improve error handling and user feedback
+
+![alt text](./chatbot.png)

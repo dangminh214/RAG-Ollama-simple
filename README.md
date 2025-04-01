@@ -40,6 +40,11 @@ py -m pip install -U langchain langchain-community streamlit faiss-cpu
 ollama pull mistral
 ```
 
+9. Install requirements
+```python
+    pip install requirements.txt
+```
+
 ## Usage
 
 1. Run the Streamlit app:

@@ -89,4 +89,11 @@ You can customize the chatbot by:
 - Add options for different embedding and LLM models
 - Improve error handling and user feedback
 
+## Sample Image
 ![alt text](./chatbot.png)
+
+## Contributing
+Feel free to open issues or submit pull requests for improvements!
+
+## License
+This project is licensed under the MIT License.
